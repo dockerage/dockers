@@ -1,5 +1,5 @@
 FROM google/golang:1.4
-MAINTAINER Xu Wang <xuwang@gmail.com>
+MAINTAINER dockerage <dockerage@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 
