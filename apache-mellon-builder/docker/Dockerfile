@@ -1,6 +1,6 @@
 #FROM dockerhub.stanford.edu/core/ubuntu:20150127-1
 FROM ubuntu:14.04
-MAINTAINER Xu Wang <xuwang@gmail.com>
+MAINTAINER dockerage <dockerage@gmail.com>
 
 # Set the env variables to non-interactive
 ENV DEBIAN_FRONTEND noninteractive
