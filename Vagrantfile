@@ -13,10 +13,7 @@ Vagrant.configure("2") do |config|
 	# A ubuntu/trusty64 VM
 	config.vm.box = "ubuntu/trusty64"
 	
-	# Or a much smaller, faster coreos VM
-	#config.vm.box =  "yungsang/coreos"
-	
-	config.vm.network :private_network, ip: "192.168.33.101"
+	config.vm.network :private_network, ip: "10.10.10.10"
 	config.vm.hostname = "dockers"
 	
 	# Pull images listed in images.json
