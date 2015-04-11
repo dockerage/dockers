@@ -1,5 +1,4 @@
-#FROM dockerhub.stanford.edu/core/ubuntu:20150127-1
-FROM ubuntu:vivid
+FROM ubuntu:14.04
 MAINTAINER Xu Wang <xuwang@gmail.com>
 
 # Install base packages
@@ -7,10 +6,16 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update \
     && apt-get -yq install \
         apache2 \ 
-		libapache2-mod-auth-mellon \
         curl \
-		git
-	
+		git \
+		liblasso3 \
+	&& apt-get clean
+
+# Install mod-auth-mellon 0.10.0, the deb is create by apache-mellon-builder
+ADD ./libapache2-mod-auth-mellon_0.10.0-1_amd64.deb  /tmp/libapache2-mod-auth-mellon_0.10.0-1_amd64.deb
+RUN dpkg -i /tmp/libapache2-mod-auth-mellon_0.10.0-1_amd64.deb \
+	&& rm /tmp/libapache2-mod-auth-mellon_0.10.0-1_amd64.deb
+
 # Activate a2enmod
 RUN a2enmod rewrite \
 	  auth_mellon \
@@ -20,7 +25,6 @@ RUN a2enmod rewrite \
       proxy_http \
       proxy_wstunnel \
 	  ssl
-
 	  
 ADD apache2/mellon /etc/apache2/mellon
 ADD apache2/ssl /etc/apache2/ssl
