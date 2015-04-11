@@ -36,7 +36,7 @@ Then start SSO-proxy:
 
 
 ## Know Issus
-* Bed SSO request caused by wrong timestamp
+* Bad SSO request with wrong timestamp
   If Mac OS X laptop goes to sleep while the VM is running, when the laptop wakes up, all the clocks are wrong in the VM and in the containers. When this happened, SSO requests may have expired timestamps and the auth will fail.
 
 Check VM time status:
