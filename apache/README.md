@@ -1,6 +1,6 @@
 # README #
 
-This is a simple Apache image with SSL support. It has following data volumes:
+This is Apache/2.4.7 (Ubuntu:14.04) image with SSL support. It has following data volumes:
 
 - /var/www for your site content
 - /var/log/apache2, optionally, if you want to store logfiles visibly outside the container
@@ -22,16 +22,9 @@ Run apache container:
 Varify it is running:
 
 	# curl http://localhost
-	<html><body><h1>It works!</h1>
-	<p>This is the default web page for this server.</p>
-	<p>The web server software is running but no content has been added, yet.</p>
-	</body></html>
-	
-	# curl -k https://localhost
-	<html><body><h1>It works!</h1>
-	<p>This is the default web page for this server.</p>
-	<p>The web server software is running but no content has been added, yet.</p>
-	</body></html>
+or
+
+	# curl -k https://localhost	
 
 Run apache with www contents under $(pwd)/vol/www/:
 
