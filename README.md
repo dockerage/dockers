@@ -1,5 +1,5 @@
-# A docker depot
-A place dockers called home.
+# A Dockyard
+A place dockers call it home.
 
 See README in subfolder for docker details.
 
