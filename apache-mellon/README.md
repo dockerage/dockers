@@ -5,4 +5,4 @@ Apache module [`mod_auth_mellon`][mod_auth_mellon] enables you to authenticate u
 
 ## See [`mod_auth_mellon`][mod_auth_mellon] for SAML Configuration
 
-[mod_auth_mellon]: https://github.com/UNINETT/mod_auth_mellon/blob/master/README
+[mod_auth_mellon]: https://github.com/UNINETT/mod_auth_mellon/tree/v0.10.0
