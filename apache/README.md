@@ -34,9 +34,7 @@ Run apache with www contents under $(pwd)/vol/www/:
 Run apache with custermized configurations under $(pwd)/vol/apache2/:
 
 	# docker run -p 80:80 -p 443:443 -d  \
-		-v $(pwd)/vol/apache2/sites-enabled:/etc/apache2/sites-enabled \
-		-v $(pwd)/vol/apache2/conf-enabled:/etc/apache2/conf-enabled \
-		-v $(pwd)/vol/apache2/mods-enabled:/etc/apache2/mods-enabled \
+		-v $(pwd)/vol/mysite.conf:/etc/apache2/sites-enabled/mysite.conf \
 		-v $(pwd)/vol/apache2/ssl:/etc/apache2/ssl \
 		-v $(pwd)/vol/www/:/var/www \
 		dockerage/apache

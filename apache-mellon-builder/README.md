@@ -28,7 +28,7 @@ After the build and get the debian packages, cleanup the vagrant box:
 
 ## Build apache-mellon-builder image locally
 
-	./usage/build.sh
+	docker build -t dockerage/apache-mellon-builder .
 Note: build env is ubuntu:14.04, see docker/Dockerfile
 
 

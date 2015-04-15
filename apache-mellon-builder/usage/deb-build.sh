@@ -7,12 +7,12 @@ export DEBFULLNAME=${DEBFULLNAME:-"Docker Age"}
 IMG='dockerage/apache-mellon-builder'
 
 echo building libapache2-mod-auth-mellon_${VERSON}-1_amd64.deb debian package...
-containerID=$(docker run -d \
+containerID=$(sudo docker run -d \
 	-e VERSON="${VERSON}" \
 	-e DEBEMAIL="${DEBEMAIL}" \
 	-e DEBFULLNAME="${DEBFULLNAME}" \
 	${IMG})
-docker wait $containerID
+sudo docker wait $containerID
 
 echo getting libapache2-mod-auth-mellon_${VERSON}-1_amd64.deb
 docker cp $containerID:/build/libapache2-mod-auth-mellon_${VERSON}-1_amd64.deb .
