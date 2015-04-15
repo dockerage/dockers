@@ -6,6 +6,9 @@ RUN apt-get update && apt-get -y install apache2
 	
 RUN a2enmod ssl && a2ensite default-ssl
 
+VOLUME /var/www
+VOLUME /var/log/apache2
+
 EXPOSE 80
 EXPOSE 443
 

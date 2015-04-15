@@ -1,6 +1,6 @@
 # README #
 
-This is Apache/2.4.7 (Ubuntu:14.04) image with SSL support. It has following data volumes:
+This is Apache/2.4.7 (Ubuntu:14.04) image with SSL support. It can have following data volumes at runtime:
 
 - /var/www for your site content
 - /var/log/apache2, optionally, if you want to store logfiles visibly outside the container
