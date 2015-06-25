@@ -1,0 +1,22 @@
+Unit]
+Description=Newrelic
+
+[Service]
+EnvironmentFile=/etc/environment
+EnvironmentFile=/home/core/newrelic/envvars
+
+TimeoutStartSec=0
+#ExecStartPre=/usr/bin/docker pull $IMAGE
+ExecStartPre=-/usr/bin/docker rm -f %n
+ExecStop=-/usr/bin/docker stop %n
+ExecStart=/bin/bash -c "docker run --rm --name %n --env CUSTOM_HOSTNAME=%H --env-file=/home/core/newrelic/envvars $OPTS $IMAGE"
+ExecStopPost=/usr/bin/docker stop %n
+RestartSec=10
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
+[X-Fleet]
+MachineMetadata=role=hosting
+Global=true

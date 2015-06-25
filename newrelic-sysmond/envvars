@@ -1,0 +1,5 @@
+# File location should match what's configured in the newrelic-systemd.sevice file
+NEW_RELIC_LICENSE_KEY=<license key>
+IMAGE=<newrelic-sysmond image>
+OPTS="-v /sys/fs/cgroup:/sys/fs/cgroup:ro/sys/fs/cgroup \
+      -v /var/run/docker.sock:/var/run/docker.sock"
