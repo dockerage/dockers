@@ -5,7 +5,7 @@ export DEBEMAIL=${DEBEMAIL:-xuwang@gmail.com}
 export DEBFULLNAME=${DEBFULLNAME:-Xu Wang}
 
 # Set up the release verson
-VERSON=${VERSON:-0.10.0}
+VERSON=${VERSON:-0.11.0}
 
 # Download the origin source tarball
 curl -L "https://github.com/UNINETT/mod_auth_mellon/releases/download/v${VERSON}/mod_auth_mellon-${VERSON}.tar.gz" \
