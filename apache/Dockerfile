@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM debian:stretch
 MAINTAINER dockerage <dockerage@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
