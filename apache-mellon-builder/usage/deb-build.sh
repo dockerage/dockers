@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export VERSON=${1:-0.10.0}
+export VERSON=${1:-0.11.0}
 export DEBEMAIL=${DEBEMAIL:-"dockerage@gmail.com"}
 export DEBFULLNAME=${DEBFULLNAME:-"Docker Age"}
 
