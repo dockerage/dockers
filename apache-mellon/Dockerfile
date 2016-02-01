@@ -6,12 +6,13 @@ ENV DEBIAN_PRIORITY=critical
 RUN apt-get update && apt-get -y install \
 	pkg-config \
 	libcurl3 \
+	libssl1.0.0 \
 	liblasso3 
 		
-# Install mod-auth-mellon 0.10.0, the deb is create by apache-mellon-builder
-ADD ./libapache2-mod-auth-mellon_0.10.0-1_amd64.deb  /tmp/libapache2-mod-auth-mellon_0.10.0-1_amd64.deb
-RUN  dpkg -i /tmp/libapache2-mod-auth-mellon_0.10.0-1_amd64.deb 
-#	&& rm /tmp/libapache2-mod-auth-mellon_0.10.0-1_amd64.deb
+# Install mod-auth-mellon 0.11.0, the deb is create by apache-mellon-builder
+ADD ./libapache2-mod-auth-mellon_0.11.0-1_amd64.deb  /tmp/libapache2-mod-auth-mellon_0.11.0-1_amd64.deb
+RUN  dpkg -i /tmp/libapache2-mod-auth-mellon_0.11.0-1_amd64.deb 
+#	&& rm /tmp/libapache2-mod-auth-mellon_0.11.0-1_amd64.deb
 
 # Activate mod_proxy
 RUN a2enmod \
